@@ -45,7 +45,7 @@ all: proj
 
 proj: $(PROJ_NAME).elf
 
-$(PROJ_NAME).elf: $(SRCS)
+$(PROJ_NAME).elf: $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@ 
 	$(OBJCOPY) -O ihex $(PROJ_NAME).elf $(PROJ_NAME).hex
 	$(OBJCOPY) -O binary $(PROJ_NAME).elf $(PROJ_NAME).bin
