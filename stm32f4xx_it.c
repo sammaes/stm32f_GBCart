@@ -15,7 +15,7 @@
 #include "repeat.h"
 
 #include "roms/tetris_rom.h"
-//#include "dhole2_logo.h"
+#include "dhole2_logo.h"
 
 /* 
  * Macros to relate the GPIO and the functionality
@@ -85,16 +85,16 @@ inline void mbc1_write(uint16_t addr, uint8_t data) {
 inline uint8_t mbc1_read(uint16_t addr) {
 	if (addr < 0x4000) {
 		/* 16KB ROM bank 00 */
-		//if (no_show_logo) {
+		if (no_show_logo) {
 			/* Custom logo disabled */
 			return rom_gb[addr];
-		//} else {
-		//	/* Custom logo enabled, only during first read at boot */
-		//	if (addr == 0x133) {
-		//		no_show_logo = 1;
-		//	}
-		//	return logo_bin[addr - 0x104];
-		//}
+		} else {
+			/* Custom logo enabled, only during first read at boot */
+			if (addr == 0x133) {
+				no_show_logo = 1;
+			}
+			return logo_bin[addr - 0x104];
+		}
 	} else if (addr < 0x8000) {
 		/* 16KB ROM Bank 01-7F */
 		return rom_gb[addr + 0x4000 * (rom_bank - 1)];

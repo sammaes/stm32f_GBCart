@@ -139,7 +139,7 @@ int main(void) {
 	ram_enable = 0x00;
 	rom_ram_mode = 0x00;
 	
-	no_show_logo = 0;
+	no_show_logo = 1;
 
 	while (1) {}
 }
