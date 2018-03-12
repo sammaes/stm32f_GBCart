@@ -56,6 +56,7 @@ $(PROJ_NAME).elf: $(OBJS)
 	mv $(PROJ_NAME).elf $(BINDIR)/$(PROJ_NAME).elf
 	$(OBJCOPY) -O ihex $(BINDIR)/$(PROJ_NAME).elf $(BINDIR)/$(PROJ_NAME).hex
 	$(OBJCOPY) -O binary $(BINDIR)/$(PROJ_NAME).elf $(BINDIR)/$(PROJ_NAME).bin
+	mv $(SRCDIR)/*.o $(BUILDDIR)/
 	mv *.o $(BUILDDIR)/
 
 clean:
