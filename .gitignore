@@ -1,0 +1,10 @@
+roms/
+logos/
+
+*.elf
+*.hex
+*.bin
+*.o
+
+.project
+.pydevproject
