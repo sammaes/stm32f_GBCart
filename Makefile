@@ -1,6 +1,6 @@
 
 # Put your stlink folder here so make burn will work.
-STLINK=~/stlink.git
+STLINK=~/stlink/build/Release
 
 SRCS=main.c system_stm32f4xx.c stm32f4xx_it.c
 
@@ -14,7 +14,7 @@ PROJ_NAME=gbcart
 
 #######################################################################################
 
-STM_COMMON=../../..
+STM_COMMON=/home/sam/bin/ProgramFiles/stm32_discovery_arm_gcc/STM32F4-Discovery_FW_V1.1.0
 
 CC=arm-none-eabi-gcc
 OBJCOPY=arm-none-eabi-objcopy
