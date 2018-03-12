@@ -14,7 +14,7 @@
 #include "stm32f4_discovery.h"
 #include "repeat.h"
 
-#include "roms/tetris_rom.h"
+#include "../roms/tetris_rom.h"
 #include "dhole2_logo.h"
 
 /* 
