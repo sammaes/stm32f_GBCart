@@ -8,3 +8,6 @@ build/*.o
 
 .project
 .pydevproject
+
+.settings/
+.cproject

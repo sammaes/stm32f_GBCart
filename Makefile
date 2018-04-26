@@ -8,7 +8,7 @@ INCLUDEDIR=include
 # Put your stlink folder here so make burn will work.
 STLINK=~/stlink/build/Release
 
-SRCS=$(SRCDIR)/main.c $(SRCDIR)/system_stm32f4xx.c $(SRCDIR)/stm32f4xx_it.c
+SRCS=$(SRCDIR)/main.c $(SRCDIR)/system_stm32f4xx.c $(SRCDIR)/stm32f4xx_it.c $(SRCDIR)/init_gpio.c
 
 # Library modules
 SRCS += stm32f4xx_exti.c stm32f4xx_gpio.c stm32f4xx_rcc.c stm32f4xx_syscfg.c
