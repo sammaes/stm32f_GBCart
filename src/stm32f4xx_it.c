@@ -48,7 +48,6 @@ inline void mbc1_write(uint16_t addr, uint8_t data) {
     if (addr == 0xA000)
     {
       state1 = data;
-//      SetLed(GPIO_Pin_1, data);
     }
   }
   else if (addr < 0x2000) {
